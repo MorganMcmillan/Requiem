@@ -10,6 +10,10 @@ app.use(bodyParser);
 const devController = require("./controller/devController");
 const businessController = require("./controller/businessController");
 
+// Note: this application uses access and refresh JWTs.
+// Both need different secrets to work
+// The names of these are: JWT_ACCESS_SECRET and JWT_REFRESH_SECRET
+
 app.use("/developer", devController);
 app.use("/business", businessController);
 
