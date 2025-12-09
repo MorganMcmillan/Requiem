@@ -8,9 +8,9 @@ const ProjectSchema = new mongoose.Schema({
     // Validate if not null that it is a URL
     repository: String,
     categories: [String],
-    requirements: [Requirement.schema]
+    requirements: [Requirement]
 });
 
-const Project = mongoose.model("Project", ProjectSchema);
+const Project = new mongoose.Model("Project", ProjectSchema);
 
-module.exports = Project;
+export default Project;

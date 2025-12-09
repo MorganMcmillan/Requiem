@@ -8,6 +8,6 @@ const DevOrgSchema = new mongoose.Schema({
     projects: [Project]
 });
 
-const DevOrganization = mongoose.model("DevOrganization", DevOrgSchema);
+const DevOrganization = new mongoose.Model("DevOrganization", DevOrgSchema);
 
-module.exports = DevOrganization;
+export default DevOrganization;

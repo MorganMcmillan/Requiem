@@ -8,6 +8,6 @@ const RequirementSchema = new mongoose.Schema({
     implementors: Number
 });
 
-const Requirement = mongoose.model("Requirement", RequirementSchema);
+const Requirement = new mongoose.Model("Requirement", RequirementSchema);
 
-module.exports = Requirement;
+export default Requirement;

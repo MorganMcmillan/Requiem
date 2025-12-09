@@ -62,10 +62,7 @@ router.put("project", async (req, res) => {
 });
 
 // Add a requirement to a project
-router.post("project/requirement", async (req, res) => {
-    // Todo
-    res.status(200);
-});
+router.post("project/requirement");
 
 router.delete("project/delete", async (req, res) => {
     try {
@@ -81,5 +78,3 @@ router.get("projects", async (req, res) => {
     const projects = await Project.find({});
     res.json(projects);
 });
-
-module.exports = router;

@@ -5,9 +5,9 @@ const BusinessOrgSchema = new mongoose.Schema({
     name: String,
     description: String,
     contactInfo: [String],
-    requirements: [Requirement.schema]
+    requirements: [Requirement]
 });
 
-const BusinessOrganization = mongoose.model("BusinessOrganization", BusinessOrgSchema);
+const BusinessOrganization = new mongoose.Model("BusinessOrganization", BusinessOrgSchema);
 
-module.exports = BusinessOrganization;
+export default BusinessOrganization;

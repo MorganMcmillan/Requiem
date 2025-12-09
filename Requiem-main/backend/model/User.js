@@ -10,16 +10,16 @@ const UserSchema = new mongoose.Schema({
     isIndividual: Boolean,
     // If not individual
     organization: mongoose.Types.ObjectId,
-    projects: [Project.schema]
+    projects: [Project]
 });
 
-UserSchema.pre("save", async function (next) {
+userSchema.pre("save", async function (next) {
     if (!this.isModified("password"))
         return next();
     this.password = await bcrypt.hash(this.password, 10);
     next();
 });
 
-const User = mongoose.model("User", UserSchema);
+const User = new mongoose.Model("User", UserSchema);
 
-module.exports = User;
+export default User;
