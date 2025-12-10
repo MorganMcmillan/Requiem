@@ -16,7 +16,7 @@ const Register = () => {
     let response = api.post("/auth/register", formJson);
     
     let loginResponse = api.post("/auth/login", response.data);
-    let token = response.data.token;
+    let token = loginResponse.data.token;
     setToken(token);
 
     navigate('/select-role');
