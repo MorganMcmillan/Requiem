@@ -4,9 +4,11 @@ import { Typography, Container, Paper, TextField, Button, Box, Select, MenuItem,
 const SubmitRequirement = () => {
   const [category, setCategory] = React.useState('');
 
+  // TODO: post data to database when submitted
   const handleChange = (event) => {
     setCategory(event.target.value);
   };
+  
 
   return (
     <Container maxWidth="sm">

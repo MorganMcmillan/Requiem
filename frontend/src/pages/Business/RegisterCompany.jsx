@@ -2,6 +2,8 @@ import React from 'react';
 import { Typography, Container, Paper, TextField, Button, Box } from '@mui/material';
 
 const RegisterCompany = () => {
+  // TODO: add company to database when submitted
+
   return (
     <Container maxWidth="sm">
       <Paper sx={{ padding: '2rem', marginTop: '2rem' }}>

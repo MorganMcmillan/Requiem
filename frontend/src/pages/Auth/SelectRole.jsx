@@ -3,6 +3,7 @@ import { Typography, Container, Paper, Grid, Button, Card, CardContent, CardActi
 import { Link } from 'react-router-dom';
 
 const SelectRole = () => {
+  // TODO: add role value to user when they click either button
   return (
     <Container maxWidth="md">
       <Paper sx={{ padding: '3rem', marginTop: '3rem', textAlign: 'center' }}>

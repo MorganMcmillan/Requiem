@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 
+// TODO: replace mock data with get request to "/developer/project"
 const mockProject = {
   name: 'My Awesome Project',
   summary: 'This is a project that will change the world!',

@@ -18,6 +18,8 @@ const Login = () => {
     let response = api.post("/auth/login", formJson);
     let token = response.data.token;
     setToken(token);
+    // TODO: navigate to specific role page based on user's current role (depends on the token's contents)
+    // Users may register without selecting a role, so navigate to 'select-role' when that's the case
     navigate('/select-role');
   };
 

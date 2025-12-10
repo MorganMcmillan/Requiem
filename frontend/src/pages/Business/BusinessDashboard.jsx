@@ -1,8 +1,11 @@
 import React from 'react';
+import api from "../../util/api";
 import { Typography, Container, Paper, Grid, Box, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const BusinessDashboard = () => {
+  // TODO: fetch requirements from API
+  
   return (
     <Container>
       <Paper sx={{ padding: '2rem', marginTop: '2rem' }}>

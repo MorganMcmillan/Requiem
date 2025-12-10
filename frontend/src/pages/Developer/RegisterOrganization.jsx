@@ -3,6 +3,7 @@ import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
 
 const RegisterOrganization = () => {
+  // TODO: post to database when submitted
   return (
     <Card>
       <h2>Register Your Organization</h2>

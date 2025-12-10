@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Container, Paper, Card, CardContent, CardActions, Button, Grid, Box, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
 const Requirements = () => {
+  // TODO: replace with get request to "/business/requirement"
   const requirements = [
     { id: 1, category: 'Web Development', description: 'A user authentication system with social login options.', time_estimate: 20 },
     { id: 2, category: 'Mobile Development', description: 'A push notification service for iOS and Android.', time_estimate: 15 },

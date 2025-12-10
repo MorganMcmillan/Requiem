@@ -3,6 +3,7 @@ import { Typography, Container, Paper, Grid, Box, Button, Card, CardContent, Car
 import { Link } from 'react-router-dom';
 
 const DeveloperDashboard = () => {
+  // TODO: replace with get request to "/developer/projects"
   const projects = [
     { name: 'Project Alpha', description: 'A revolutionary new social media platform.' },
     { name: 'Project Beta', description: 'A mobile app for tracking fitness goals.' },
