@@ -1,14 +1,26 @@
 import React from 'react';
+import api from "../../util/api";
+import { setToken, getToken } from "../../util/token";
 import { Card, Typography, TextField, Button, Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
 
+  const formRef = useRef(null);
+
   const handleLogin = () => {
-    // Simulate a login by redirecting the user
+    let formData = new FormData(formRef);
+    let formObject = {};
+    formData.forEach((k, v) => formObject[k] = v);
+    let formJson = JSON.stringify(formObject);
+
+    let response = api.post("/auth/login", formJson);
+    let token = response.data.token;
+    setToken(token);
     navigate('/select-role');
   };
+
 
   return (
     <Box
@@ -23,7 +35,7 @@ const Login = () => {
         <Typography variant="h4" component="h1" gutterBottom>
           Login
         </Typography>
-        <form>
+        <form ref={formRef}>
           <TextField
             label="Email"
             variant="outlined"
